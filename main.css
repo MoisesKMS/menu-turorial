@@ -1,0 +1,86 @@
+body {
+    background-color: antiquewhite;
+}
+
+/* Menu */
+.nav {
+    position: absolute;
+    right: 0;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 0%;
+    overflow: hidden;
+    transition: all .2s ease-in-out;
+}
+
+.nav .nav__link{
+    font-size: 26px;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 700;
+}
+
+.nav .nav__link:hover{
+    color: aqua;
+}
+
+.menu__show {
+    width: 100%;
+}
+
+/* button */
+
+.button {
+    border: none;
+    background-color: #000;
+    width: 64px;
+    height: 64px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    border-radius: 50%;
+    transition: all .2s ease-in-out;
+}
+
+.button::before, .button::after{
+    content: "";
+    position: absolute;
+    width: 45px;
+    height: 5px;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: all .2s ease-in-out;
+}
+
+.button::before{
+    top: 25px;
+    left: 9px;
+}
+
+.button::after{
+    top: 35px;
+    left: 9px;
+}
+
+.button.open{
+    background-color: #fff;
+}
+.open.button::before, .open.button::after{
+    background-color: red;
+}
+.open.button::before{
+    top: 30px;
+    transform: rotate(45deg);
+}
+
+.open.button::after{
+    top: 30px;
+    transform: rotate(-45deg);
+}
